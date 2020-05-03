@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway&display=swap" rel="stylesheet">
+		<style media="screen">
+			.navbar {
+				overflow: hidden;
+			}
+			.navbar a {
+				font-family: 'Raleway', sans-serif;
+				float: left;
+                display: block;
+                color: olive;
+                text-align: center;
+                padding: 14px 20px;
+                border-radius: 10px;
+                text-decoration: none;
+                transition: .4s;
+			}
+			.navbar a:hover {
+                background-color: white;
+                color: black;
+            }
+
+			.navbar a.active {
+				color: violet;
+			}
+
+			.links {
+				margin: auto;
+				width: 50%;
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="links">
+			<nav>
+				<div class="navbar">
+					<a href="index.html">HOME</a>
+					<a href="profile.html">ABOUT</a>
+					<a href="hobbies&skills.html">HOBBIES & SKILLS</a>
+					<a href="artwork.html">ARTWORK</a>
+					<a href="contact.html">CONTACT</a>
+					<a href="guestbook.html">GUESTBOOK</a>
+				</div>
+			</nav>
+		</div>
+		<canvas id = "myCanvas"  width = "1920" height = "1080">
+			<script>
+				var e1 = document.querySelector("#myCanvas");
+				var c1 = e1.getContext("2d");
+				c1.beginPath();
+
+				// the fill color
+				c1.fillStyle = "#4a8009";
+				c1.fill();
+
+				var e2 = document.querySelector("#myCanvas");
+				var c2 = e2.getContext("2d");
+				c2.beginPath();
+				c2.moveTo(400, 200);
+				c2.lineTo(200, 600);
+				c2.lineTo(600, 600);
+				c2.closePath();
+
+				// the fill color
+				c2.fillStyle = "#4a8009";
+				c2.fill();
+
+				var e2 = document.querySelector("#myCanvas");
+				var c2 = e2.getContext("2d");
+				c2.beginPath();
+				c2.moveTo(500, 250);
+				c2.lineTo(300, 600);
+				c2.lineTo(700, 600);
+				c2.closePath();
+
+				// the fill color
+				c2.fillStyle = "#4a8009";
+				c2.fill();
+
+				var e2 = document.querySelector("#myCanvas");
+				var c2 = e2.getContext("2d");
+				c2.beginPath();
+				c2.moveTo(1000, 250);
+				c2.lineTo(800, 600);
+				c2.lineTo(1200, 600);
+				c2.closePath();
+
+				// the fill color
+				c2.fillStyle = "#4a8009";
+				c2.fill();
+
+				var e2 = document.querySelector("#myCanvas");
+				var c2 = e2.getContext("2d");
+				c2.beginPath();
+				c2.moveTo(1200, 400);
+				c2.lineTo(1000, 600);
+				c2.lineTo(1400, 600);
+				c2.closePath();
+
+				// the fill color
+				c2.fillStyle = "#4a8009";
+				c2.fill();
+
+				var c = document.getElementById("myCanvas");
+				var ctx = c.getContext("2d");
+				ctx.beginPath();
+				ctx.arc(750, 300, 100, 0, 2 * Math.PI);
+				ctx.fillStyle = "yellow";
+				c2.fill();
+			</script>
+		</canvas>
+	</body>
+</html>

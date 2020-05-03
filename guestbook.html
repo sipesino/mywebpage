@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<title> Guestbook Page using CSS and HTML5 Tags </title>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway&display=swap" rel="stylesheet">
+	<style>
+		* {
+			font-family: 'Raleway', sans-serif;
+		}
+
+		.navbar {
+			overflow: hidden;
+		}
+		.navbar a {
+			font-family: 'Raleway', sans-serif;
+			float: left;
+			display: block;
+			color: olive;
+			text-align: center;
+			padding: 14px 20px;
+			border-radius: 10px;
+			text-decoration: none;
+			transition: .4s;
+		}
+		.navbar a:hover {
+			background-color: white;
+			color: black;
+		}
+
+		.navbar a.active {
+			color: violet;
+		}
+
+		.links {
+			margin: auto;
+			width: 50%;
+			padding: 10px;
+		}
+
+		header {
+			text-align: center;
+			color: black;
+		}
+
+		.pinfo {
+			width: 350px;
+			height: 180px;
+			margin: auto;
+			margin-top: 50px;
+			padding: 20px;
+			background: rgba(154,154,0, 0.8);
+			border-radius: 15px;
+			box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+			position: relative;
+			text-align: center;
+		}
+
+		.squery {
+			width: 350px;
+			height: 120px;
+			margin: auto;
+			margin-top: 40px;
+			padding: 20px;
+			background: rgba(154,154,0, 0.8);
+			border-radius: 15px;
+			box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+			position: relative;
+			color: white;
+			text-align: center;
+		}
+
+		.cmts {
+			width: 350px;
+			height: 230px;
+			margin: auto;
+			margin-top: 40px;
+			padding: 20px;
+			background: rgba(154,154,0, 0.8);
+			border-radius: 15px;
+			box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+			overflow: hidden;
+			position: relative;
+			color: white;
+			text-align: center;
+		}
+
+		legend {
+			font-weight: bold;
+			font-size: 22px;
+			color: black;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		body {
+			background-color: #1fc8db;
+    		background-image: url("https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		textarea, select, input[type="text"] {
+			outline: none;
+			box-sizing: border-box;
+			padding: 10px;
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 250px;
+			border: none;
+			font-size: 15px;
+			font-weight: 400;
+			transition: 0.4s;
+			border-radius: 10px;
+		}
+
+		 input[type="number"] {
+			outline: none;
+ 			box-sizing: border-box;
+ 			padding: 10px;
+ 			margin-top: 10px;
+ 			margin-bottom: 10px;
+ 			width: 55px;
+ 			border: none;
+ 			font-size: 15px;
+ 			font-weight: 400;
+ 			transition: 0.4s;
+ 			border-radius: 10px;
+		 }
+
+		input[type="text"] {
+			text-align: center;
+		}
+
+		textarea, input[type="text"]:focus {
+			transition: 0.2s ease;
+			outline: none;
+			font-weight: 900;
+		}
+
+		textarea, input[type="text"]:hover {
+			width: 260px;
+			transition: 0.2s ease;
+			outline: none;
+			font-weight: 900;
+		}
+
+		#submit {
+			color: #000;
+			padding: 10px;
+			width: 390px;
+			margin-top: 40px;
+			border-radius: 10px;
+			border-style: hidden;
+			background-color: rgba(154,154,0, 0.8);
+			text-decoration: none;
+			outline: none;
+			transition: .4s;
+			box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+		}
+
+		#submit:hover {
+			background-color: white;
+			color: black;
+		}
+
+		textarea {
+			resize: none;
+			height: 150px;
+			width: 300px;
+		}
+
+		.sub {
+			width: 400px;
+			margin: auto;
+			text-align: center;
+		}
+
+		h1 {
+			color: white;
+			text-shadow: 2px 2px olive;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="links">
+		<nav>
+			<div class="navbar">
+				<a href="index.html">HOME</a>
+				<a href="profile.html">ABOUT</a>
+				<a href="hobbies&skills.html">HOBBIES & SKILLS</a>
+				<a href="artwork.html">ARTWORK</a>
+				<a href="contact.html">CONTACT</a>
+				<a href="guestbook.html">GUESTBOOK</a>
+			</div>
+		</nav>
+	</div>
+	<header>
+		<h1> My Guest Book </h1>
+	</header>
+	<form id="guestbook" action="server-script.php" method="post">
+		<div class="pinfo">
+			<legend>Personal Information</legend>
+			<input name="name" class="inputs" type="text" value="" placeholder="Name" required="">
+			<input name="email"  class="inputs" type="text" value="" placeholder="Email Address" required="">
+		</div>
+
+		<div class="squery">
+			<legend>Website Rating</legend>
+			<b>Rate my site [1-10]</b> <input type="number" name="rate" min="1" max="10" required=""/> <br>
+		</div>
+
+		<div class="cmts">
+			<legend>Comments and Suggestions</legend>
+			<textarea name="comment" placeholder="Message"></textarea>
+		</div>
+
+		<div class="sub">
+			<input id="submit" type="submit" name="submit">
+		</div>
+
+	</form>
+</body>
+
+</html>

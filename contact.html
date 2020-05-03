@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Cinzel|Raleway&display=swap" rel="stylesheet">
+        <meta charset="utf-8">
+        <title>Contact Me</title>
+        <style media="screen">
+            body {
+                background-image: url("https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            * {
+                font-family: 'Raleway', sans-serif;
+            }
+            .navbar {
+                overflow: hidden;
+            }
+            .navbar a {
+                float: left;
+                display: block;
+                color: olive;
+                text-align: center;
+                padding: 14px 20px;
+                border-radius: 10px;
+                text-decoration: none;
+                transition: .4s;
+            }
+            .navbar a:hover {
+                background-color: rgba(255,255,255, 1);
+            }
+
+            .navbar a.active {
+                color: violet;
+            }
+
+            .links {
+                margin: auto;
+                width: 50%;
+                padding: 10px;
+            }
+
+            .btns {
+                margin: auto;
+                width : 470px;
+                padding-top: 13%;
+            }
+            img {
+                margin: 5px;
+            }
+
+            .container {
+                width: 350px;
+                height: 400px;
+                margin: 100px auto;
+                padding: 20px;
+                background: rgba(154,154,0, 0.8);
+                border-radius: 15px;
+                box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+                position: relative;
+                text-align: center;
+            }
+
+            .inputs {
+                box-sizing: border-box;
+                padding: 10px;
+                margin-bottom: 10px;
+                width: 300px;
+                border: none;
+                font-size: 15px;
+                font-weight: 400;
+                transition: 0.4s;
+                border-radius: 10px;
+            }
+
+            input[type="text"] {
+                text-align: center;
+            }
+
+            .inputs:focus {
+                transition: 0.2s ease;
+                outline: none;
+                font-weight: 900;
+            }
+
+            .inputs:hover {
+                width: 305px;
+                transition: 0.2s ease;
+                outline: none;
+                font-weight: 900;
+            }
+
+            textarea{
+                resize: none;
+                height: 200px;
+            }
+
+            #submit {
+                color: #000;
+                padding: 10px;
+                width: 300px;
+                border-radius: 10px;
+                background-color: transparent;
+                text-decoration: none;
+                outline: none;
+                border: dashed 1px #FFF;
+                transition: .4s;
+            }
+
+            #submit:hover {
+                background-color: white;
+                color: olive;
+            }
+
+            .inputs::placeholder {
+                color: #a5b1c2
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="links">
+    		<nav>
+    			<div class="navbar">
+    				<a href="index.html">HOME</a>
+    				<a href="profile.html">ABOUT</a>
+    				<a href="hobbies&skills.html">HOBBIES & SKILLS</a>
+    				<a href="artwork.html">ARTWORK</a>
+    				<a href="contact.html">CONTACT</a>
+    				<a href="guestbook.html">GUESTBOOK</a>
+    			</div>
+    		</nav>
+    	</div>
+        <div class="btns">
+            <img src="imgs/phone.png" alt="phone" width="100" height="100" onclick="number()">
+            <a href="mailto:richard.pesino@unc.edu.ph"><img src="imgs/gmail.png" alt="gmail" width="100" height="100"></a>
+            <a href="https://www.facebook.com/sipesino"><img src="imgs/facebook.png" alt="facebook" width="100" height="100"></a>
+            <a href="https://twitter.com/ChardPesino"><img src="imgs/twitter.png" alt="twitter" width="100" height="100"></a>
+        </div>
+    </body>
+    <script type="text/javascript">
+        $("#email").focusout(function() {
+           check_email();
+        });
+        function check_email() {
+           var pattern = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+           var email = $("#email").val();
+           if (!pattern.test(email) || email === '') {
+               alert("Invalid Email");
+           }
+        }
+    </script>
+</html>
